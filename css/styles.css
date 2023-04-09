@@ -9,6 +9,9 @@ body {
   text-align: center;
   font-family: "Merriweather", serif;
 }
+footer {
+  margin: 0;
+}
 h1 {
   color: #1f4068;
   font-family: "Sacramento", cursive;
@@ -179,7 +182,7 @@ nav.nav-bar a:hover {
   font-size: 0.85rem;
   padding: 20px 0px;
 }
-.aboutContainer {
+#aboutContainer {
   margin: 5%;
   font-size: 0.9rem;
 }
