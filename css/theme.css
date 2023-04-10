@@ -66,6 +66,7 @@ nav.nav-bar {
   background-color: #1a1a1a;
   height: 60px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   position: sticky;
   top: 0;
@@ -77,6 +78,7 @@ nav.nav-bar ul {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
 }
 
 nav.nav-bar li {
