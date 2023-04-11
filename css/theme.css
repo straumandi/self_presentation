@@ -1,5 +1,4 @@
 /* ************* HTML-TAG SELECTORS ************* */
-
 html, body {
   height: 100%;
 }
@@ -15,12 +14,11 @@ footer {
 h1 {
   color: #1f4068;
   font-family: "Sacramento", cursive;
-  font-size: 5.625rem; /*r steht für root, ignoriert den parent, heißt wenn im body em gesetzt wär,
-                        würde es nicht übernommen werden */
+  font-size: 5.625rem;
   line-height: 2;
   margin: 50px auto 0 auto; /* TOP - RIGHT - BOTTOM - LEFT */
 }
-/* 100% font-size = 16px = 1em */
+/* 100% font-size: 1em = 16px */
 h2 {
   color: #1f4068;
   font-family: "Montserrat", sans-serif;
@@ -57,11 +55,6 @@ span {
 }
 
 /* ************* CLASS SELECTORS ************* */
-.mainContainer {
-  display: flex;
-  flex-direction: column;
-  min-height:81%;
-}
 nav.nav-bar {
   background-color: #1a1a1a;
   height: 60px;
@@ -96,8 +89,11 @@ nav.nav-bar a {
 nav.nav-bar a:hover {
   background-color: #1b1c25;
 }
-
-
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  min-height:81%;
+}
 .topContainer {
   background-color: #ebecf1;
   position: relative;

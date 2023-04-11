@@ -1,0 +1,7 @@
+/*By using sans-serif as the last option in the font-family property, 
+the browser will attempt to use Verdana font first, 
+and if that's not available on the user's system, 
+it will fallback to any other available sans-serif font. */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Verdana", sans-serif;
+}
