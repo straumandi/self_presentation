@@ -1,0 +1,294 @@
+/* Base styles and variables */
+:root {
+  --primary: #1f4068;
+  --secondary: #206a5d;
+  --bg-light: #ebecf1;
+  --text: #1b1c25;
+  --nav-bg: #1a1a1a;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text);
+  font-family: "Merriweather", serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography */
+h1 {
+  color: var(--primary);
+  font-family: "Sacramento", cursive;
+  font-size: 5.625rem;
+  margin: 50px auto 0;
+}
+
+h2 {
+  color: var(--primary);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: var(--secondary);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  max-width: 150px;
+  margin: 4rem auto;
+  background: linear-gradient(
+      90deg,
+      transparent,
+      var(--secondary) 25%,
+      var(--secondary) 75%,
+      transparent
+  );
+  opacity: 0.6;
+}
+
+/* Navigation */
+.nav-bar {
+  background-color: var(--nav-bg);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+}
+
+.nav-bar a:hover {
+  color: var(--secondary);
+}
+
+/* Layout containers */
+.topContainer {
+  background-color: var(--bg-light);
+  padding: 5rem 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.middleContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.bottomContainer {
+  background-color: var(--bg-light);
+  padding: 3rem 1rem;
+  margin-top: auto;
+  text-align: center;
+}
+
+/* Profile section */
+.profile {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 2rem 0;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+/* Skills section */
+.skill-row {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.devPic, .musicPic {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+/* Contact section */
+.contact-me {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.contact-message {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+/* Button styles */
+.btn {
+  background: var(--primary);
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background: var(--secondary);
+}
+
+/* Footer */
+.footer-link {
+  color: var(--secondary);
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.copyright {
+  color: var(--primary);
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+/* Hobbies page */
+.hobbiesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.codingPic {
+  width: 20%;
+  max-width: 150px;
+  height: auto;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .codingPic {
+      width: 40%;
+      max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .codingPic {
+      width: 50%;
+      max-width: 80px;
+  }
+}
+
+.hobbyRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 4rem 0;
+  align-items: center;
+}
+
+.hobbyPicLeft, .hobbyPicRight {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* About page */
+#aboutContainer {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+#aboutContainer img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 2rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 3.5rem;
+  }
+
+  h2 {
+      font-size: 2rem;
+  }
+
+  .nav-bar ul {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+  }
+
+  .skill-row {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+
+  .devPic, .musicPic {
+      margin: 0 auto;
+  }
+
+  .hobbyRow {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+
+  .intro, .contact-message {
+      width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 2.5rem;
+  }
+
+  .topContainer {
+      padding: 3rem 1rem;
+  }
+
+  .middleContainer {
+      padding: 2rem 1rem;
+  }
+}
